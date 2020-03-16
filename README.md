@@ -1,5 +1,5 @@
 # Rick Template ☘
-Ready-for-use шаблон Telegram бота для PHP библиотеки [aethletic/rick](https://github.com/aethletic/rick).
+Ready-for-use шаблон Telegram бота для PHP Telegram Bot Api библиотеки [aethletic/rick](https://github.com/aethletic/rick).
 
 ## Установка
 **1.** Скопировать репозиторий:
