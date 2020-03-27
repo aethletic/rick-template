@@ -32,8 +32,8 @@ if ($status == 'spam')
 if ($status == 'ban')
     exit($rick->action('typing')->say("*Стоп! Вы забанены* 🤚"));
 
+if ($status == 'new_version')
+    exit($rick->action('typing')->say("Ура! Моя версия данных обновилась до *" . Config::get('bot.version') . "* 🥳", $rick->keyboard('example')));
+
 if ($status == 'new_user')
     $rick->action('typing')->say("*Вы добавлены в базу данных* 🥳");
-
-if ($status == 'new_version')
-    return $rick->action('typing')->say("Ура! Моя версия данных обновилась до *" . Config::get('bot.version') . "* 🥳", $rick->keyboard('example'));
