@@ -13,7 +13,9 @@ class User
             'lang' => $user['lang'],
             'reg_date' => time(),
             'last_message_date' => time(),
-            'banned' => 0,
+            'is_banned' => 'N',
+            'expire_ban' => 0,
+            'bot_version' => Config::get('bot.version'),
         ];
 
         return DB::init()->table('users')->insert($insert);
@@ -42,4 +44,19 @@ class User
             return DB::init()->table('users')->where('user_id', '=', $user_id)->get()[0];
         }
     }
+
+    public static function isNewBotVersion($user_id)
+    {
+        $userBotVersion = User::get($user_id, 'bot_version');
+        $curBotVersion = Config::get('bot.version');
+
+        if ($userBotVersion !== $curBotVersion) {
+            User::update($user_id, ['bot_version' => $curBotVersion]);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
 }
