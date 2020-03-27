@@ -15,15 +15,29 @@ class Bootstrap
     public static function user($user)
     {
         if (!User::exists($user['id'])) {
-            return User::create($user);
+            User::create($user);
+            return 'new_user';
         } else {
-            $diffLastMessageDate = time() - User::get($user['id'], 'last_message_date');
-
-            if ($diffLastMessageDate <= Config::get('spam.timeout')) {
-                return false;
+            if (self::isSpam($user)) {
+                return 'spam';
             }
 
-            return User::setLastMessage($user['id']);
+            User::setLastMessage($user['id']);
+
+            if (User::isNewBotVersion($user['id'])) {
+                return 'new_version';
+            }
+        }
+    }
+
+    public static function isSpam($user)
+    {
+        $diffLastMessageDate = time() - User::get($user['id'], 'last_message_date');
+
+        if ($diffLastMessageDate <= Config::get('spam.timeout')) {
+            return true;
+        } else {
+            return false;
         }
     }
 }
