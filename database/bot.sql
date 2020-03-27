@@ -8,5 +8,7 @@ CREATE TABLE "users" (
 	"lang"	TEXT,
 	"reg_date"	INTEGER,
 	"last_message_date"	INTEGER,
-	"banned"	INTEGER
+	"is_banned"	TEXT,
+	"expire_ban"	INTEGER,
+	"bot_version"	TEXT
 );
