@@ -8,7 +8,7 @@ Ready-for-use шаблон бота для PHP Telegram Bot Api библиоте
 $ git clone https://github.com/aethletic/rick-template.git
 ```
 
-**2.** Установить зависимости ([aethletic/rick](https://github.com/aethletic/rick") и [библиотеку для работы с БД](https://github.com/mrjgreen/database "библиотеку для работы с БД")):
+**2.** Установить зависимости ([aethletic/rick](https://github.com/aethletic/rick) и [библиотеку для работы с БД](https://github.com/mrjgreen/database "библиотеку для работы с БД")):
 
 ```
 $ composer require aethletic/rick
