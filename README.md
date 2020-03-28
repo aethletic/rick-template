@@ -1,7 +1,7 @@
 # Rick Template ☘
 Ready-for-use шаблон бота для PHP Telegram Bot Api библиотеки [aethletic/rick](https://github.com/aethletic/rick).
 
-### Установка
+## Установка
 **1.** Скопировать репозиторий:
 
 ```
@@ -30,7 +30,7 @@ curl https://api.telegram.org/botЗДЕСЬ_ТОКЕН_БОТА/setWebhook?url=h
 
 И покажет клавиатуру.
 
-### Структура бота
+## Структура бота
 
 1. **bot** - папка в которой хранится вся логика проекта.
 	- callbacks - классы для обработки колбэк запросов
