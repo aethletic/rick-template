@@ -1,0 +1,6 @@
+{
+    "require": {
+        "aethletic/database": "^1.0",
+        "aethletic/rick": "^1.0"
+    }
+}
