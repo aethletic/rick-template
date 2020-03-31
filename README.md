@@ -5,14 +5,17 @@ Ready-for-use шаблон бота для PHP Telegram Bot Api библиоте
 **1.** Скопировать репозиторий:
 
 ```
-$ git clone https://github.com/aethletic/rick-template.git
+$ git clone https://github.com/aethletic/rick-template.git telebot
+```
+
+```
+$ cd telebot
 ```
 
 **2.** Установить зависимости ([aethletic/rick](https://github.com/aethletic/rick) и [библиотеку для работы с БД](https://github.com/mrjgreen/database "библиотеку для работы с БД")):
 
 ```
-$ composer require aethletic/rick
-$ composer require mrjgreen/database
+$ composer install
 ```
 
 **3.** В файле `/config/config.php` добавить токен бота.
