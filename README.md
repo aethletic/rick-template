@@ -12,7 +12,7 @@ $ git clone https://github.com/aethletic/rick-template.git telebot
 $ cd telebot
 ```
 
-**2.** Установить зависимости ([aethletic/rick](https://github.com/aethletic/rick) и [библиотеку для работы с БД](https://github.com/mrjgreen/database "библиотеку для работы с БД")):
+**2.** Установить зависимости:
 
 ```
 $ composer install
